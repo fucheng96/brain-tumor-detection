@@ -17,7 +17,7 @@ More details can be found in the [Jupyter Notebook here](https://github.com/fuch
 
 Clone this git repository to your local workspace.
 
-`https://github.com/fucheng96/product-recommendation-engine.git`
+`[https://github.com/fucheng96/brain-tumor-detection.git](https://github.com/fucheng96/brain-tumor-detection.git)`
 
 ## Folder Directory
 
@@ -39,5 +39,4 @@ Clone this git repository to your local workspace.
 
 ## Acknowledgements
 
-Kudos to Olist for releasing a [public dataset](https://www.kaggle.com/olistbr/brazilian-ecommerce). It contains multiple datasets an e-commerce platform may store, which provide many exciting areas to explore apart from NLP such as sales prediction, customer segmentation etc.
-
+Kudos to Navoneel Chakrabarty for releasing [brain MRI images](https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection). It contains MRI images with and without tumor for detectyion purposes.
