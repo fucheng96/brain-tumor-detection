@@ -7,11 +7,19 @@
 
 ## Overview
 
-The main objective of this project is to create recommendation engine to recommend products to customers on the Brazilian E-Commerce platform [Olist](https://olist.com/pt-br/) using Collaborative Filtering. This is crucial to increase average spend of the customers and drive sales for the sellers and Olist itself.
+The main objective of this project is to accurately classify whether a brain tumor is present in MRI images.<br>
 
-The dataset contains information of 100k orders from 2016 to 2018 such as order status, price, payment and freight performance to customer location, product attributes, etc.
+3 Convolutional Neural Network models were developed:
+1. Self-Built CNN Model
+2. ResNet 50 Pre-trained (Transfer Learning)
+3. VGG16 Pre-trained (Transfer Learning)
 
-More details can be found in the [Jupyter Notebook here](https://github.com/fucheng96/product-recommendation-engine/blob/main/product-recommendation-engine.ipynb).
+In the end, ranking of the models with accuracy on hold-out dataset is as follows:
+1. **Self-Built CNN Model - 86% accuracy**
+2. **VGG16 - 80% accuracy**
+3. **ResNet50 - 63% accuracy**
+
+More details can be found in the [Jupyter Notebook here](https://github.com/fucheng96/brain-tumor-detection/blob/main/brain-tumor-detection.ipynb).
 
 ## Installation
 
@@ -21,22 +29,18 @@ Clone this git repository to your local workspace.
 
 ## Folder Directory
 
-- [data](https://github.com/fucheng96/product-recommendation-engine/tree/main/data)<br>
-  Consists of Olist's public dataset downloaded from Kaggle and an Excel table that maps Brazilian state abbreviation to its full name. 
-   - olist_customers_dataset.csv
-   - olist_order_items_dataset.csv
-   - olist_order_reviews_dataset.csv
-   - olist_orders_dataset.csv
-   - olist_products_dataset.csv
-   - product_category_name_translation.csv
-   - customer_state_name.xlsx
-- [product-recommendation-engine.ipynb](https://github.com/fucheng96/product-recommendation-engine/blob/main/product-recommendation-engine.ipynb)<br>
+- [brain-tumor-dataset](https://github.com/fucheng96/brain-tumor-detection/tree/main/data)<br>
+  Consists of brain MRI images in various folders. 
+   - yes - Contains 155 MRI images with brain tumor
+   - no - Contains 98 MRI images with no tumor
+   - train - Contains MRI images for model training, folder named '0' indicates no brain tumor and '1' indicators otherwise
+   - valid - Contains MRI images for model validation, folder named '0' indicates no brain tumor and '1' indicators otherwise
+   - test - Contains MRI images as hold-out dataset for model testing, folder named '0' indicates no brain tumor and '1' indicators otherwise  
+- [brain-tumor-detection.ipynb](https://github.com/fucheng96/brain-tumor-detection/blob/main/brain-tumor-detection.ipynb)<br>
   This notebook contains all the details of this project from Problem Statement and Strategy to Exploratory Data Analysis. 
-- [customer_matrix.pkl](https://github.com/fucheng96/product-recommendation-engine/blob/main/customer_matrix.pkl)<br>
-  A pickled customer matrix as a result of the Funk SVD algorithm.
-- [product_matrix.pkl](https://github.com/fucheng96/product-recommendation-engine/blob/main/product_matrix.pkl)<br>
-  A pickled product matrix as a result of the Funk SVD algorithm.
+- [self_built_cnn_model.pt](https://github.com/fucheng96/brain-tumor-detection/blob/main/self_built_cnn_model.pt))<br>
+  Self-built CNN pytorch model.
 
 ## Acknowledgements
 
-Kudos to Navoneel Chakrabarty for releasing [brain MRI images](https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection). It contains MRI images with and without tumor for detectyion purposes.
+Kudos to Navoneel Chakrabarty for releasing [brain MRI images](https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection). It contains MRI images with and without tumor for detection purposes.
