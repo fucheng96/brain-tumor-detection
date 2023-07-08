@@ -38,8 +38,12 @@ Clone this git repository to your local workspace.
    - test - Contains MRI images as hold-out dataset for model testing, folder named '0' indicates no brain tumor and '1' indicators otherwise  
 - [brain-tumor-detection.ipynb](https://github.com/fucheng96/brain-tumor-detection/blob/main/brain-tumor-detection.ipynb)<br>
   This notebook contains all the details of this project from Problem Statement and Strategy to Exploratory Data Analysis. 
-- [self_built_cnn_model.pt](https://github.com/fucheng96/brain-tumor-detection/blob/main/self_built_cnn_model.pt))<br>
+- [self_built_cnn_model.pt](https://github.com/fucheng96/brain-tumor-detection/blob/main/self_built_cnn_model.pt)<br>
   Self-built CNN pytorch model.
+- [resnet_pretrained_model.pt](https://github.com/fucheng96/brain-tumor-detection/blob/main/resnet_pretrained_model.pt)<br>
+  ResNet 50 pre-trained pytorch model.
+- [vgg16_pretrained_model.pt](https://github.com/fucheng96/brain-tumor-detection/blob/main/vgg16_pretrained_model.pt)<br>
+  VGG16 pre-trained pytorch model.
 
 ## Acknowledgements
 
